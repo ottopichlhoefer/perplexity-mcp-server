@@ -32,6 +32,9 @@ dist/
 ehthumbs.db
 Thumbs.db
 
+# Backups
+*.bak
+
 # Logs
 *.log
 npm-debug.log*

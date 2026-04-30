@@ -14,22 +14,7 @@ const server = new Server(
 	},
 	{
 		capabilities: {
-			tools: {
-				perplexity_search: {
-					name: "perplexity_search",
-					description: "Search the web using Perplexity AI",
-					inputSchema: {
-						type: "object",
-						properties: {
-							query: {
-								type: "string",
-								description: "The search query"
-							}
-						},
-						required: ["query"]
-					}
-				}
-			}
+			tools: {}
 		}
 	}
 );
@@ -126,3 +111,4 @@ server.setRequestHandler(CallToolRequestSchema, async (request) => {
 const transport = new StdioServerTransport();
 await server.connect(transport);
 console.error("Perplexity MCP server running on stdio");
+
